@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    @apply bg-ivory text-kajal font-sans antialiased;
+    font-feature-settings: "kern", "liga";
+  }
+  h1, h2, h3, h4 { @apply font-display font-normal tracking-[0.01em] text-kajal; }
+  ::selection { background: #E9C979; color: #2A1A1F; }
+  :focus-visible { outline: 2px solid #B8862B; outline-offset: 2px; border-radius: 4px; }
+  .tabular { font-variant-numeric: tabular-nums; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
+}
+
+@layer components {
+  .container-site { @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-10; }
+
+  /* The jharokha arch — the single signature motif. */
+  .arch { border-radius: 999px 999px 18px 18px; overflow: hidden; }
+  .arch-frame { position: relative; }
+  .arch-frame::after {
+    content: ""; position: absolute; inset: 8px; border-radius: 999px 999px 12px 12px;
+    border: 1px solid rgba(233, 201, 121, 0.85); pointer-events: none;
+  }
+
+  .hairline { @apply border-gold-200/60; }
+  .link-underline { @apply underline decoration-gold-300 decoration-1 underline-offset-4 hover:decoration-gold-600; }
+
+  .input {
+    @apply w-full rounded-lg border border-kajal-300/60 bg-white px-3.5 py-2.5 text-[15px] text-kajal placeholder:text-kajal-400
+           transition focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-200 disabled:bg-ivory-200;
+  }
+  .label { @apply mb-1.5 block text-sm font-medium text-kajal-700; }
+  .field-error { @apply mt-1 text-sm text-kumkum; }
+
+  .chip { @apply inline-flex items-center gap-1 rounded-full border border-kajal-300/50 bg-white px-3 py-1 text-sm text-kajal-700 transition hover:border-gold-500; }
+  .chip-active { @apply border-kajal bg-kajal text-ivory hover:border-kajal; }
+
+  .skeleton { @apply animate-pulse rounded-md bg-ivory-300/70; }
+  .card { @apply rounded-2xl border border-gold-200/50 bg-white; }
+}
+
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { scrollbar-width: none; }
+
+.prose-lovevital h2 { @apply mt-8 font-display text-2xl; }
+.prose-lovevital h3 { @apply mt-6 font-display text-xl; }
+.prose-lovevital p, .prose-lovevital li { @apply leading-7 text-kajal-700; }
+.prose-lovevital ul { @apply my-3 list-disc pl-5; }
+.prose-lovevital a { @apply link-underline; }
+.prose-lovevital strong { @apply font-medium text-kajal; }
+
+@keyframes shimmer-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.hero-reveal > * { animation: shimmer-in .7s cubic-bezier(.2,.7,.2,1) both; }
+.hero-reveal > *:nth-child(2) { animation-delay: .08s; }
+.hero-reveal > *:nth-child(3) { animation-delay: .16s; }
+.hero-reveal > *:nth-child(4) { animation-delay: .24s; }

@@ -1,0 +1,2358 @@
+{
+  "categories": [
+    {
+      "slug": "jewellery",
+      "name": "Jewellery",
+      "parent": null,
+      "description": "Handcrafted artificial jewellery — kundan, temple, oxidised and contemporary.",
+      "display_order": 1
+    },
+    {
+      "slug": "earrings",
+      "name": "Earrings",
+      "parent": "jewellery",
+      "description": "Jhumkas, chandbalis, studs and hoops.",
+      "display_order": 1
+    },
+    {
+      "slug": "necklaces",
+      "name": "Necklaces & Sets",
+      "parent": "jewellery",
+      "description": "Chokers, kundan sets, temple necklaces and layered haars.",
+      "display_order": 2
+    },
+    {
+      "slug": "bangles",
+      "name": "Bangles & Kadas",
+      "parent": "jewellery",
+      "description": "Stackable bangles and statement kadas.",
+      "display_order": 3
+    },
+    {
+      "slug": "bracelets",
+      "name": "Bracelets",
+      "parent": "jewellery",
+      "description": "Charm, chain and cuff bracelets.",
+      "display_order": 4
+    },
+    {
+      "slug": "rings",
+      "name": "Rings",
+      "parent": "jewellery",
+      "description": "Cocktail, traditional and adjustable rings.",
+      "display_order": 5
+    },
+    {
+      "slug": "pendants",
+      "name": "Pendants",
+      "parent": "jewellery",
+      "description": "Pendant necklaces for everyday elegance.",
+      "display_order": 6
+    },
+    {
+      "slug": "anklets-tikkas",
+      "name": "Anklets & Maang Tikkas",
+      "parent": "jewellery",
+      "description": "Payals, anklets and maang tikkas.",
+      "display_order": 7
+    },
+    {
+      "slug": "silver-oxidised",
+      "name": "Silver & Oxidised",
+      "parent": null,
+      "description": "Silver-look and oxidised pieces with a boho soul.",
+      "display_order": 2
+    },
+    {
+      "slug": "oxidised-earrings",
+      "name": "Oxidised Earrings",
+      "parent": "silver-oxidised",
+      "description": "Tribal, boho and German-silver earrings.",
+      "display_order": 1
+    },
+    {
+      "slug": "silver-sets",
+      "name": "Silver-look Sets",
+      "parent": "silver-oxidised",
+      "description": "Necklace sets in rhodium and oxidised finishes.",
+      "display_order": 2
+    },
+    {
+      "slug": "ethnic-wear",
+      "name": "Ethnic Wear",
+      "parent": null,
+      "description": "Kurtis, sarees, anarkalis and festive ensembles.",
+      "display_order": 3
+    },
+    {
+      "slug": "kurtis",
+      "name": "Kurtis & Kurtas",
+      "parent": "ethnic-wear",
+      "description": "Everyday and festive kurtis.",
+      "display_order": 1
+    },
+    {
+      "slug": "sarees",
+      "name": "Sarees",
+      "parent": "ethnic-wear",
+      "description": "Silk, georgette and chiffon sarees.",
+      "display_order": 2
+    },
+    {
+      "slug": "ethnic-dresses",
+      "name": "Ethnic Dresses",
+      "parent": "ethnic-wear",
+      "description": "Anarkalis and flared ethnic dresses.",
+      "display_order": 3
+    },
+    {
+      "slug": "western-wear",
+      "name": "Western Wear",
+      "parent": null,
+      "description": "Tops, trousers and co-ords for work and weekends.",
+      "display_order": 4
+    },
+    {
+      "slug": "tops",
+      "name": "Tops",
+      "parent": "western-wear",
+      "description": "Blouses, peplums and everyday tops.",
+      "display_order": 1
+    },
+    {
+      "slug": "trousers",
+      "name": "Trousers & Palazzos",
+      "parent": "western-wear",
+      "description": "Tailored trousers and flowy palazzos.",
+      "display_order": 2
+    },
+    {
+      "slug": "coord-sets",
+      "name": "Co-ord Sets",
+      "parent": "western-wear",
+      "description": "Matching sets, effortlessly put together.",
+      "display_order": 3
+    },
+    {
+      "slug": "festive-bridal",
+      "name": "Festive & Bridal",
+      "parent": null,
+      "description": "Showstoppers for weddings and festivals.",
+      "display_order": 5
+    },
+    {
+      "slug": "bridal-jewellery",
+      "name": "Bridal Jewellery",
+      "parent": "festive-bridal",
+      "description": "Statement bridal sets and heirloom-look pieces.",
+      "display_order": 1
+    },
+    {
+      "slug": "festive-apparel",
+      "name": "Festive Apparel",
+      "parent": "festive-bridal",
+      "description": "Lehengas and festive ensembles.",
+      "display_order": 2
+    }
+  ],
+  "collections": [
+    {
+      "slug": "festive-edit",
+      "name": "The Festive Edit",
+      "description": "Kundan, zari and jewel tones for Diwali, Karva Chauth and every celebration in between.",
+      "featured": true,
+      "display_order": 1
+    },
+    {
+      "slug": "heritage-gold",
+      "name": "Heritage Gold",
+      "description": "Temple motifs and antique finishes inspired by South Indian heirlooms.",
+      "featured": true,
+      "display_order": 2
+    },
+    {
+      "slug": "everyday-minimal",
+      "name": "Everyday Minimal",
+      "description": "Light, wearable pieces that go from desk to dinner.",
+      "featured": true,
+      "display_order": 3
+    },
+    {
+      "slug": "wedding-season",
+      "name": "Wedding Season",
+      "description": "Bridal sets and showstopper lehengas for the big day.",
+      "featured": true,
+      "display_order": 4
+    },
+    {
+      "slug": "boho-oxidised",
+      "name": "Boho Oxidised",
+      "description": "Tribal silhouettes in oxidised German silver.",
+      "featured": false,
+      "display_order": 5
+    }
+  ],
+  "attributes": [
+    {
+      "code": "color",
+      "name": "Colour",
+      "display": "swatch",
+      "variant_axis": true,
+      "values": [
+        "Gold",
+        "Rose Gold",
+        "Silver",
+        "Oxidised",
+        "Antique Gold",
+        "Maroon",
+        "Emerald Green",
+        "Royal Blue",
+        "Mustard",
+        "Ivory",
+        "Black",
+        "Blush Pink",
+        "Teal",
+        "Lavender",
+        "White",
+        "Navy",
+        "Peach",
+        "Beige",
+        "Olive",
+        "Red",
+        "Wine",
+        "Magenta",
+        "Sage"
+      ]
+    },
+    {
+      "code": "size",
+      "name": "Size",
+      "display": "button",
+      "variant_axis": true,
+      "values": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "Free Size",
+        "Adjustable",
+        "6",
+        "7",
+        "8",
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    },
+    {
+      "code": "material",
+      "name": "Base Material",
+      "display": "text",
+      "variant_axis": false,
+      "values": [
+        "Brass",
+        "Alloy",
+        "Copper",
+        "German Silver"
+      ]
+    },
+    {
+      "code": "plating",
+      "name": "Plating",
+      "display": "text",
+      "variant_axis": false,
+      "values": [
+        "Gold-plated",
+        "Rose gold-plated",
+        "Rhodium-plated",
+        "Oxidised",
+        "Antique gold-plated",
+        "Matte gold-plated"
+      ]
+    },
+    {
+      "code": "stone",
+      "name": "Stone",
+      "display": "text",
+      "variant_axis": false,
+      "values": [
+        "Kundan",
+        "Pearl",
+        "American Diamond (CZ)",
+        "Ruby-tone",
+        "Emerald-tone",
+        "Polki-look",
+        "Meenakari",
+        "No stone"
+      ]
+    },
+    {
+      "code": "style",
+      "name": "Style",
+      "display": "text",
+      "variant_axis": false,
+      "values": [
+        "Traditional",
+        "Contemporary",
+        "Fusion",
+        "Minimal",
+        "Statement",
+        "Boho",
+        "Casual",
+        "Formal"
+      ]
+    },
+    {
+      "code": "fabric",
+      "name": "Fabric",
+      "display": "text",
+      "variant_axis": false,
+      "values": [
+        "Cotton",
+        "Rayon",
+        "Georgette",
+        "Silk Blend",
+        "Chiffon",
+        "Crepe",
+        "Linen Blend",
+        "Chanderi",
+        "Organza",
+        "Viscose"
+      ]
+    },
+    {
+      "code": "fit",
+      "name": "Fit",
+      "display": "text",
+      "variant_axis": false,
+      "values": [
+        "Straight",
+        "A-line",
+        "Flared",
+        "Regular",
+        "Relaxed",
+        "Slim",
+        "Wide-leg"
+      ]
+    },
+    {
+      "code": "sleeve",
+      "name": "Sleeve",
+      "display": "text",
+      "variant_axis": false,
+      "values": [
+        "Sleeveless",
+        "Short",
+        "Three-quarter",
+        "Full",
+        "Puff"
+      ]
+    },
+    {
+      "code": "occasion",
+      "name": "Occasion",
+      "display": "text",
+      "variant_axis": false,
+      "values": [
+        "Festive",
+        "Wedding",
+        "Daily Wear",
+        "Office",
+        "Party"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "kind": "jewellery",
+      "sku": "JW-EAR-001",
+      "name": "Gold-Plated Traditional Earrings",
+      "cat": "earrings",
+      "art": "jhumka",
+      "mrp": 999,
+      "sale": 499,
+      "colors": [
+        "Gold"
+      ],
+      "gem": "ruby",
+      "bg": "blush",
+      "sizes": null,
+      "attrs": {
+        "stone": "Ruby-tone",
+        "style": "Traditional",
+        "material": "Brass",
+        "occasion": "Festive"
+      },
+      "plating": null,
+      "weight": 28,
+      "flags": "featured,bestseller",
+      "collections": [
+        "festive-edit"
+      ],
+      "desc": "Our signature temple jhumkas, hand-finished in 22k gold-tone plating with ruby-tone stones and a cascade of seed pearls. Lightweight enough for an all-night celebration.",
+      "tags": [
+        "jhumka",
+        "temple",
+        "festive"
+      ],
+      "stock": 50,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "gold-plated-traditional-earrings"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-EAR-002",
+      "name": "Meenakari Peacock Jhumkas",
+      "cat": "earrings",
+      "art": "jhumka",
+      "mrp": 1499,
+      "sale": 849,
+      "colors": [
+        "Gold",
+        "Antique Gold"
+      ],
+      "gem": "emerald",
+      "bg": "sage",
+      "sizes": null,
+      "attrs": {
+        "stone": "Meenakari",
+        "style": "Traditional",
+        "material": "Brass",
+        "occasion": "Festive"
+      },
+      "plating": null,
+      "weight": 34,
+      "flags": "featured",
+      "collections": [
+        "festive-edit",
+        "heritage-gold"
+      ],
+      "desc": "Hand-painted meenakari peacocks crown these bell jhumkas, finished with emerald-tone drops and pearl fringes.",
+      "tags": [
+        "jhumka",
+        "peacock",
+        "meenakari"
+      ],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "meenakari-peacock-jhumkas"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-EAR-003",
+      "name": "Kundan Chandbali Earrings",
+      "cat": "earrings",
+      "art": "chandbali",
+      "mrp": 1899,
+      "sale": 1099,
+      "colors": [
+        "Gold",
+        "Rose Gold"
+      ],
+      "gem": "kundan",
+      "bg": "champagne",
+      "sizes": null,
+      "attrs": {
+        "stone": "Kundan",
+        "style": "Statement",
+        "material": "Brass",
+        "occasion": "Festive"
+      },
+      "plating": null,
+      "weight": 32,
+      "flags": "bestseller",
+      "collections": [
+        "festive-edit",
+        "wedding-season"
+      ],
+      "desc": "Crescent chandbalis set with uncut-look kundan and edged with luminous faux pearls — a wedding-season essential.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "kundan-chandbali-earrings"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-EAR-004",
+      "name": "American Diamond Floral Studs",
+      "cat": "earrings",
+      "art": "studs",
+      "mrp": 899,
+      "sale": 449,
+      "colors": [
+        "Silver",
+        "Gold",
+        "Rose Gold"
+      ],
+      "gem": "kundan",
+      "bg": "powder",
+      "sizes": null,
+      "attrs": {
+        "stone": "American Diamond (CZ)",
+        "style": "Minimal",
+        "material": "Brass",
+        "occasion": "Office"
+      },
+      "plating": "Rhodium-plated",
+      "weight": 6,
+      "flags": "new",
+      "collections": [
+        "everyday-minimal"
+      ],
+      "desc": "Eight-petal studs pavé-set with brilliant-cut CZ that catch the light from every angle.",
+      "tags": [
+        "studs",
+        "cz",
+        "office"
+      ],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "american-diamond-floral-studs"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-EAR-005",
+      "name": "Pearl Drop Studs",
+      "cat": "earrings",
+      "art": "studs",
+      "mrp": 699,
+      "sale": 399,
+      "colors": [
+        "Gold",
+        "Silver"
+      ],
+      "gem": "pearl",
+      "bg": "ivory",
+      "sizes": null,
+      "attrs": {
+        "stone": "Pearl",
+        "style": "Minimal",
+        "material": "Brass",
+        "occasion": "Daily Wear"
+      },
+      "plating": null,
+      "weight": 5,
+      "flags": "",
+      "collections": [
+        "everyday-minimal"
+      ],
+      "desc": "A luminous faux pearl framed by a delicate gold-tone floral setting.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "pearl-drop-studs"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-EAR-006",
+      "name": "Textured Gold Hoops",
+      "cat": "earrings",
+      "art": "hoops",
+      "mrp": 799,
+      "sale": 479,
+      "colors": [
+        "Gold",
+        "Rose Gold",
+        "Silver"
+      ],
+      "gem": "topaz",
+      "bg": "sand",
+      "sizes": null,
+      "attrs": {
+        "stone": "No stone",
+        "style": "Contemporary",
+        "material": "Brass",
+        "occasion": "Party"
+      },
+      "plating": null,
+      "weight": 12,
+      "flags": "new",
+      "collections": [
+        "everyday-minimal"
+      ],
+      "desc": "Hammered-texture hoops with a click-top closure. Wear them from brunch to after-hours.",
+      "tags": [
+        "hoops"
+      ],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "textured-gold-hoops"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-OXE-001",
+      "name": "Oxidised Silver Chandbalis",
+      "cat": "oxidised-earrings",
+      "art": "chandbali",
+      "mrp": 899,
+      "sale": 449,
+      "colors": [
+        "Oxidised"
+      ],
+      "gem": "onyx",
+      "bg": "sage",
+      "sizes": null,
+      "attrs": {
+        "stone": "No stone",
+        "style": "Boho",
+        "material": "German Silver",
+        "occasion": "Daily Wear"
+      },
+      "plating": "Oxidised",
+      "weight": 24,
+      "flags": "bestseller",
+      "collections": [
+        "boho-oxidised"
+      ],
+      "desc": "Tribal-inspired chandbalis in oxidised German silver with ghungroo fringes.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "oxidised-silver-chandbalis"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-OXE-002",
+      "name": "Oxidised Mirror Jhumkas",
+      "cat": "oxidised-earrings",
+      "art": "jhumka",
+      "mrp": 749,
+      "sale": 399,
+      "colors": [
+        "Oxidised"
+      ],
+      "gem": "sapphire",
+      "bg": "powder",
+      "sizes": null,
+      "attrs": {
+        "stone": "No stone",
+        "style": "Boho",
+        "material": "German Silver",
+        "occasion": "Daily Wear"
+      },
+      "plating": "Oxidised",
+      "weight": 26,
+      "flags": "",
+      "collections": [
+        "boho-oxidised"
+      ],
+      "desc": "Mirror-work domes and beaded drops — the ultimate kurta companion.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "oxidised-mirror-jhumkas"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-OXE-003",
+      "name": "Afghani Tribal Hoops",
+      "cat": "oxidised-earrings",
+      "art": "hoops",
+      "mrp": 699,
+      "sale": 349,
+      "colors": [
+        "Oxidised"
+      ],
+      "gem": "emerald",
+      "bg": "sage",
+      "sizes": null,
+      "attrs": {
+        "stone": "Emerald-tone",
+        "style": "Boho",
+        "material": "German Silver",
+        "occasion": "Daily Wear"
+      },
+      "plating": "Oxidised",
+      "weight": 18,
+      "flags": "new",
+      "collections": [
+        "boho-oxidised"
+      ],
+      "desc": "Oversized engraved hoops with emerald-tone accents.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "afghani-tribal-hoops"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-NCK-001",
+      "name": "Ruby Kundan Choker Set",
+      "cat": "necklaces",
+      "art": "choker",
+      "mrp": 3999,
+      "sale": 1999,
+      "colors": [
+        "Gold"
+      ],
+      "gem": "ruby",
+      "bg": "blush",
+      "sizes": null,
+      "attrs": {
+        "stone": "Kundan",
+        "style": "Statement",
+        "material": "Brass",
+        "occasion": "Wedding"
+      },
+      "plating": null,
+      "weight": 86,
+      "flags": "featured,bestseller",
+      "collections": [
+        "festive-edit",
+        "wedding-season"
+      ],
+      "desc": "A regal choker of kundan diamonds and ruby-tone stones with pearl drops, paired with matching earrings.",
+      "tags": [
+        "choker",
+        "set",
+        "bridal"
+      ],
+      "stock": 25,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "ruby-kundan-choker-set"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-NCK-002",
+      "name": "Emerald Kundan Necklace Set",
+      "cat": "necklaces",
+      "art": "kundan-set",
+      "mrp": 4499,
+      "sale": 2699,
+      "colors": [
+        "Gold",
+        "Antique Gold"
+      ],
+      "gem": "emerald",
+      "bg": "champagne",
+      "sizes": null,
+      "attrs": {
+        "stone": "Kundan",
+        "style": "Statement",
+        "material": "Brass",
+        "occasion": "Wedding"
+      },
+      "plating": null,
+      "weight": 110,
+      "flags": "featured",
+      "collections": [
+        "festive-edit",
+        "wedding-season"
+      ],
+      "desc": "Emerald-tone drops and kundan florets on a graduated collar, complete with matching studs.",
+      "tags": [],
+      "stock": 20,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "emerald-kundan-necklace-set"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-NCK-003",
+      "name": "Lakshmi Temple Necklace",
+      "cat": "necklaces",
+      "art": "temple",
+      "mrp": 3499,
+      "sale": 2299,
+      "colors": [
+        "Antique Gold"
+      ],
+      "gem": "ruby",
+      "bg": "sand",
+      "sizes": null,
+      "attrs": {
+        "stone": "Ruby-tone",
+        "style": "Traditional",
+        "material": "Brass",
+        "occasion": "Festive"
+      },
+      "plating": "Antique gold-plated",
+      "weight": 95,
+      "flags": "bestseller",
+      "collections": [
+        "heritage-gold"
+      ],
+      "desc": "Hand-chased Lakshmi coin motifs and a ruby-tone pendant, inspired by Chettinad heirlooms.",
+      "tags": [],
+      "stock": 18,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "lakshmi-temple-necklace"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-NCK-004",
+      "name": "Layered Pearl Rani Haar",
+      "cat": "necklaces",
+      "art": "layered",
+      "mrp": 2999,
+      "sale": 1799,
+      "colors": [
+        "Gold"
+      ],
+      "gem": "pearl",
+      "bg": "ivory",
+      "sizes": null,
+      "attrs": {
+        "stone": "Pearl",
+        "style": "Traditional",
+        "material": "Brass",
+        "occasion": "Wedding"
+      },
+      "plating": null,
+      "weight": 120,
+      "flags": "",
+      "collections": [
+        "wedding-season",
+        "heritage-gold"
+      ],
+      "desc": "Two cascading strands of faux pearls and gold beads finished with a statement pendant.",
+      "tags": [],
+      "stock": 15,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "layered-pearl-rani-haar"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-NCK-005",
+      "name": "Sapphire Statement Collar",
+      "cat": "necklaces",
+      "art": "choker",
+      "mrp": 2799,
+      "sale": 1599,
+      "colors": [
+        "Gold",
+        "Silver"
+      ],
+      "gem": "sapphire",
+      "bg": "powder",
+      "sizes": null,
+      "attrs": {
+        "stone": "American Diamond (CZ)",
+        "style": "Contemporary",
+        "material": "Brass",
+        "occasion": "Party"
+      },
+      "plating": null,
+      "weight": 72,
+      "flags": "new",
+      "collections": [],
+      "desc": "Midnight-blue stones and CZ pavé for cocktail evenings.",
+      "tags": [],
+      "stock": 16,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "sapphire-statement-collar"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-SLV-001",
+      "name": "Silver-look Temple Necklace Set",
+      "cat": "silver-sets",
+      "art": "temple",
+      "mrp": 2499,
+      "sale": 1299,
+      "colors": [
+        "Silver",
+        "Oxidised"
+      ],
+      "gem": "sapphire",
+      "bg": "powder",
+      "sizes": null,
+      "attrs": {
+        "stone": "No stone",
+        "style": "Fusion",
+        "material": "German Silver",
+        "occasion": "Festive"
+      },
+      "plating": "Rhodium-plated",
+      "weight": 80,
+      "flags": "featured",
+      "collections": [
+        "boho-oxidised"
+      ],
+      "desc": "A silver-look temple necklace with matching earrings — fusion styling for sarees and Indo-western looks.",
+      "tags": [
+        "silver",
+        "necklace set"
+      ],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "silver-look-temple-necklace-set"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-SLV-002",
+      "name": "Oxidised Coin Choker Set",
+      "cat": "silver-sets",
+      "art": "choker",
+      "mrp": 1999,
+      "sale": 999,
+      "colors": [
+        "Oxidised"
+      ],
+      "gem": "onyx",
+      "bg": "sage",
+      "sizes": null,
+      "attrs": {
+        "stone": "No stone",
+        "style": "Boho",
+        "material": "German Silver",
+        "occasion": "Festive"
+      },
+      "plating": "Oxidised",
+      "weight": 76,
+      "flags": "",
+      "collections": [
+        "boho-oxidised"
+      ],
+      "desc": "Antique coin choker with drop earrings — the boho staple.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "oxidised-coin-choker-set"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-BNG-001",
+      "name": "Kundan Bangle Set of 4",
+      "cat": "bangles",
+      "art": "bangles",
+      "mrp": 1999,
+      "sale": 1099,
+      "colors": [
+        "Gold"
+      ],
+      "gem": "emerald",
+      "bg": "sand",
+      "sizes": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ],
+      "attrs": {
+        "stone": "Kundan",
+        "style": "Traditional",
+        "material": "Brass",
+        "occasion": "Festive"
+      },
+      "plating": null,
+      "weight": 90,
+      "flags": "bestseller",
+      "collections": [
+        "festive-edit"
+      ],
+      "desc": "Four slim bangles set with kundan and emerald-tone stones. Sold as a set of four.",
+      "tags": [
+        "bangles",
+        "set"
+      ],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": "bangle",
+      "slug": "kundan-bangle-set-of-4"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-BNG-002",
+      "name": "Artificial Glass Bangles — Bridal Stack",
+      "cat": "bangles",
+      "art": "bangles",
+      "mrp": 1299,
+      "sale": 749,
+      "colors": [
+        "Red",
+        "Maroon",
+        "Emerald Green"
+      ],
+      "gem": "ruby",
+      "bg": "blush",
+      "sizes": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ],
+      "attrs": {
+        "stone": "No stone",
+        "style": "Traditional",
+        "material": "Alloy",
+        "occasion": "Wedding"
+      },
+      "plating": null,
+      "weight": 110,
+      "flags": "",
+      "collections": [
+        "wedding-season"
+      ],
+      "desc": "A 24-piece bridal stack of glass-finish bangles with gold-tone accent kadas.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": "bangle",
+      "slug": "artificial-glass-bangles-bridal-stack"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-BNG-003",
+      "name": "Antique Peacock Kada",
+      "cat": "bangles",
+      "art": "kada",
+      "mrp": 1599,
+      "sale": 999,
+      "colors": [
+        "Antique Gold",
+        "Gold"
+      ],
+      "gem": "ruby",
+      "bg": "champagne",
+      "sizes": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ],
+      "attrs": {
+        "stone": "Polki-look",
+        "style": "Statement",
+        "material": "Brass",
+        "occasion": "Festive"
+      },
+      "plating": null,
+      "weight": 60,
+      "flags": "",
+      "collections": [
+        "heritage-gold"
+      ],
+      "desc": "A single screw-open kada with peacock engravings and polki-look stones.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": "bangle",
+      "slug": "antique-peacock-kada"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-BNG-004",
+      "name": "CZ Slim Kada Pair",
+      "cat": "bangles",
+      "art": "kada",
+      "mrp": 1499,
+      "sale": 899,
+      "colors": [
+        "Rose Gold",
+        "Gold",
+        "Silver"
+      ],
+      "gem": "kundan",
+      "bg": "powder",
+      "sizes": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ],
+      "attrs": {
+        "stone": "American Diamond (CZ)",
+        "style": "Minimal",
+        "material": "Brass",
+        "occasion": "Office"
+      },
+      "plating": null,
+      "weight": 40,
+      "flags": "new",
+      "collections": [
+        "everyday-minimal"
+      ],
+      "desc": "Two sleek kadas with a single line of channel-set CZ.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": "bangle",
+      "slug": "cz-slim-kada-pair"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-BRC-001",
+      "name": "Charm Bracelet with Evil Eye",
+      "cat": "bracelets",
+      "art": "bracelet",
+      "mrp": 999,
+      "sale": 549,
+      "colors": [
+        "Rose Gold",
+        "Gold"
+      ],
+      "gem": "sapphire",
+      "bg": "blush",
+      "sizes": null,
+      "attrs": {
+        "stone": "No stone",
+        "style": "Contemporary",
+        "material": "Brass",
+        "occasion": "Daily Wear"
+      },
+      "plating": null,
+      "weight": 14,
+      "flags": "bestseller",
+      "collections": [
+        "everyday-minimal"
+      ],
+      "desc": "Dainty chain with evil-eye and heart charms; adjustable length 6.5–8 inches.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "charm-bracelet-with-evil-eye"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-BRC-002",
+      "name": "Pearl & Gold Chain Bracelet",
+      "cat": "bracelets",
+      "art": "chain-bracelet",
+      "mrp": 849,
+      "sale": 499,
+      "colors": [
+        "Gold",
+        "Silver"
+      ],
+      "gem": "pearl",
+      "bg": "ivory",
+      "sizes": null,
+      "attrs": {
+        "stone": "Pearl",
+        "style": "Minimal",
+        "material": "Brass",
+        "occasion": "Office"
+      },
+      "plating": null,
+      "weight": 10,
+      "flags": "",
+      "collections": [
+        "everyday-minimal"
+      ],
+      "desc": "Paperclip links with a single pearl station.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "pearl-gold-chain-bracelet"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-BRC-003",
+      "name": "Amethyst Tennis Bracelet",
+      "cat": "bracelets",
+      "art": "bracelet",
+      "mrp": 1799,
+      "sale": 1099,
+      "colors": [
+        "Silver",
+        "Rose Gold"
+      ],
+      "gem": "amethyst",
+      "bg": "powder",
+      "sizes": null,
+      "attrs": {
+        "stone": "American Diamond (CZ)",
+        "style": "Contemporary",
+        "material": "Brass",
+        "occasion": "Party"
+      },
+      "plating": "Rhodium-plated",
+      "weight": 16,
+      "flags": "new",
+      "collections": [],
+      "desc": "Violet and clear CZ alternate in a classic tennis line with box clasp.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "amethyst-tennis-bracelet"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-RNG-001",
+      "name": "Traditional Ruby Cocktail Ring",
+      "cat": "rings",
+      "art": "ring",
+      "mrp": 899,
+      "sale": 449,
+      "colors": [
+        "Gold",
+        "Antique Gold"
+      ],
+      "gem": "ruby",
+      "bg": "blush",
+      "sizes": [
+        "Adjustable"
+      ],
+      "attrs": {
+        "stone": "Ruby-tone",
+        "style": "Traditional",
+        "material": "Brass",
+        "occasion": "Festive"
+      },
+      "plating": null,
+      "weight": 8,
+      "flags": "bestseller",
+      "collections": [
+        "heritage-gold"
+      ],
+      "desc": "A ruby-tone centre stone held in a temple-style setting on an adjustable band.",
+      "tags": [
+        "ring",
+        "adjustable"
+      ],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": "ring",
+      "slug": "traditional-ruby-cocktail-ring"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-RNG-002",
+      "name": "Solitaire CZ Ring",
+      "cat": "rings",
+      "art": "ring",
+      "mrp": 799,
+      "sale": 399,
+      "colors": [
+        "Silver",
+        "Rose Gold",
+        "Gold"
+      ],
+      "gem": "kundan",
+      "bg": "powder",
+      "sizes": [
+        "6",
+        "7",
+        "8"
+      ],
+      "attrs": {
+        "stone": "American Diamond (CZ)",
+        "style": "Minimal",
+        "material": "Brass",
+        "occasion": "Daily Wear"
+      },
+      "plating": "Rhodium-plated",
+      "weight": 4,
+      "flags": "",
+      "collections": [
+        "everyday-minimal"
+      ],
+      "desc": "A brilliant-cut CZ solitaire on a slim band.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": "ring",
+      "slug": "solitaire-cz-ring"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-RNG-003",
+      "name": "Emerald Kundan Finger Ring Pair",
+      "cat": "rings",
+      "art": "ring-pair",
+      "mrp": 1199,
+      "sale": 649,
+      "colors": [
+        "Gold"
+      ],
+      "gem": "emerald",
+      "bg": "sage",
+      "sizes": [
+        "Adjustable"
+      ],
+      "attrs": {
+        "stone": "Kundan",
+        "style": "Traditional",
+        "material": "Brass",
+        "occasion": "Wedding"
+      },
+      "plating": null,
+      "weight": 12,
+      "flags": "",
+      "collections": [
+        "wedding-season"
+      ],
+      "desc": "Two stackable rings with emerald-tone and kundan clusters.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": "ring",
+      "slug": "emerald-kundan-finger-ring-pair"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-PND-001",
+      "name": "Ruby Teardrop Pendant Necklace",
+      "cat": "pendants",
+      "art": "pendant",
+      "mrp": 1199,
+      "sale": 699,
+      "colors": [
+        "Rose Gold",
+        "Gold"
+      ],
+      "gem": "ruby",
+      "bg": "blush",
+      "sizes": null,
+      "attrs": {
+        "stone": "Ruby-tone",
+        "style": "Contemporary",
+        "material": "Brass",
+        "occasion": "Party"
+      },
+      "plating": null,
+      "weight": 9,
+      "flags": "featured",
+      "collections": [
+        "everyday-minimal"
+      ],
+      "desc": "A faceted ruby-tone teardrop framed in a halo of CZ, on an 18-inch chain.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "ruby-teardrop-pendant-necklace"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-PND-002",
+      "name": "Sapphire Halo Pendant",
+      "cat": "pendants",
+      "art": "pendant",
+      "mrp": 1299,
+      "sale": 799,
+      "colors": [
+        "Silver",
+        "Gold"
+      ],
+      "gem": "sapphire",
+      "bg": "powder",
+      "sizes": null,
+      "attrs": {
+        "stone": "American Diamond (CZ)",
+        "style": "Minimal",
+        "material": "Brass",
+        "occasion": "Office"
+      },
+      "plating": "Rhodium-plated",
+      "weight": 8,
+      "flags": "new",
+      "collections": [],
+      "desc": "Deep blue stone ringed with CZ — subtle sparkle for every day.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "sapphire-halo-pendant"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-PND-003",
+      "name": "Emerald Drop Pendant",
+      "cat": "pendants",
+      "art": "pendant",
+      "mrp": 1099,
+      "sale": 649,
+      "colors": [
+        "Gold"
+      ],
+      "gem": "emerald",
+      "bg": "sage",
+      "sizes": null,
+      "attrs": {
+        "stone": "Emerald-tone",
+        "style": "Fusion",
+        "material": "Brass",
+        "occasion": "Festive"
+      },
+      "plating": null,
+      "weight": 9,
+      "flags": "",
+      "collections": [
+        "festive-edit"
+      ],
+      "desc": "An emerald-tone drop on a fine box chain.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "emerald-drop-pendant"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-ANK-001",
+      "name": "Ghungroo Anklets (Pair)",
+      "cat": "anklets-tikkas",
+      "art": "anklet",
+      "mrp": 999,
+      "sale": 549,
+      "colors": [
+        "Silver",
+        "Gold",
+        "Oxidised"
+      ],
+      "gem": "pearl",
+      "bg": "ivory",
+      "sizes": null,
+      "attrs": {
+        "stone": "No stone",
+        "style": "Traditional",
+        "material": "Brass",
+        "occasion": "Festive"
+      },
+      "plating": null,
+      "weight": 40,
+      "flags": "",
+      "collections": [
+        "boho-oxidised"
+      ],
+      "desc": "Musical ghungroo payals with an adjustable hook. Sold as a pair.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "ghungroo-anklets-pair"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-TKA-001",
+      "name": "Kundan Maang Tikka",
+      "cat": "anklets-tikkas",
+      "art": "tikka",
+      "mrp": 1299,
+      "sale": 699,
+      "colors": [
+        "Gold",
+        "Rose Gold"
+      ],
+      "gem": "kundan",
+      "bg": "champagne",
+      "sizes": null,
+      "attrs": {
+        "stone": "Kundan",
+        "style": "Traditional",
+        "material": "Brass",
+        "occasion": "Wedding"
+      },
+      "plating": null,
+      "weight": 18,
+      "flags": "featured",
+      "collections": [
+        "wedding-season"
+      ],
+      "desc": "A chandbali-shaped tikka with kundan and pearl drops.",
+      "tags": [],
+      "stock": 40,
+      "cost_pct": 0.32,
+      "processing": 1,
+      "returnable": true,
+      "chart": null,
+      "slug": "kundan-maang-tikka"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-BRD-001",
+      "name": "Polki-look Bridal Necklace Set",
+      "cat": "bridal-jewellery",
+      "art": "kundan-set",
+      "mrp": 9999,
+      "sale": 5999,
+      "colors": [
+        "Antique Gold"
+      ],
+      "gem": "ruby",
+      "bg": "champagne",
+      "sizes": null,
+      "attrs": {
+        "stone": "Polki-look",
+        "style": "Statement",
+        "material": "Brass",
+        "occasion": "Wedding"
+      },
+      "plating": "Antique gold-plated",
+      "weight": 180,
+      "flags": "featured",
+      "collections": [
+        "wedding-season"
+      ],
+      "desc": "Our most opulent set: polki-look stones, ruby-tone accents and cascading pearls, with earrings and maang tikka. Made to order in limited quantities; not eligible for return for hygiene reasons.",
+      "tags": [],
+      "stock": 8,
+      "cost_pct": 0.32,
+      "processing": 2,
+      "returnable": false,
+      "chart": null,
+      "slug": "polki-look-bridal-necklace-set"
+    },
+    {
+      "kind": "jewellery",
+      "sku": "JW-BRD-002",
+      "name": "Heritage Rani Haar Bridal Set",
+      "cat": "bridal-jewellery",
+      "art": "layered",
+      "mrp": 7999,
+      "sale": 4799,
+      "colors": [
+        "Gold"
+      ],
+      "gem": "ruby",
+      "bg": "sand",
+      "sizes": null,
+      "attrs": {
+        "stone": "Kundan",
+        "style": "Statement",
+        "material": "Brass",
+        "occasion": "Wedding"
+      },
+      "plating": null,
+      "weight": 200,
+      "flags": "",
+      "collections": [
+        "wedding-season",
+        "heritage-gold"
+      ],
+      "desc": "A long rani haar with choker and jhumkas — three pieces, one heirloom look.",
+      "tags": [],
+      "stock": 10,
+      "cost_pct": 0.32,
+      "processing": 2,
+      "returnable": true,
+      "chart": null,
+      "slug": "heritage-rani-haar-bridal-set"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-KRT-001",
+      "name": "Emerald Block-Print Cotton Kurti",
+      "cat": "kurtis",
+      "art": "kurti",
+      "mrp": 1499,
+      "sale": 749,
+      "colors": [
+        "Emerald Green",
+        "Maroon",
+        "Navy"
+      ],
+      "gem": "ruby",
+      "bg": "ivory",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "attrs": {
+        "fabric": "Cotton",
+        "fit": "Straight",
+        "sleeve": "Three-quarter",
+        "style": "Traditional",
+        "occasion": "Daily Wear"
+      },
+      "weight": null,
+      "flags": "featured,bestseller",
+      "collections": [
+        "everyday-minimal"
+      ],
+      "desc": "Hand block-printed cotton kurti with gold-foil yoke embroidery and a straight, breathable fit.",
+      "tags": [
+        "kurti",
+        "cotton",
+        "block print"
+      ],
+      "stock": 14,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": "top",
+      "slug": "emerald-block-print-cotton-kurti"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-KRT-002",
+      "name": "Chanderi Embroidered Kurta",
+      "cat": "kurtis",
+      "art": "kurta-full",
+      "mrp": 2499,
+      "sale": 1499,
+      "colors": [
+        "Ivory",
+        "Blush Pink"
+      ],
+      "gem": "ruby",
+      "bg": "champagne",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "attrs": {
+        "fabric": "Chanderi",
+        "fit": "A-line",
+        "sleeve": "Full",
+        "style": "Traditional",
+        "occasion": "Festive"
+      },
+      "weight": null,
+      "flags": "new",
+      "collections": [
+        "festive-edit"
+      ],
+      "desc": "Luminous chanderi with zari-thread yoke and scalloped hem. Comes with a cotton lining.",
+      "tags": [],
+      "stock": 14,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": "top",
+      "slug": "chanderi-embroidered-kurta"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-KRT-003",
+      "name": "Mustard Rayon Short Kurti",
+      "cat": "kurtis",
+      "art": "kurti-short",
+      "mrp": 999,
+      "sale": 549,
+      "colors": [
+        "Mustard",
+        "Teal"
+      ],
+      "gem": "ruby",
+      "bg": "ivory",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "attrs": {
+        "fabric": "Rayon",
+        "fit": "Straight",
+        "sleeve": "Short",
+        "style": "Casual",
+        "occasion": "Daily Wear"
+      },
+      "weight": null,
+      "flags": "",
+      "collections": [],
+      "desc": "An easy short kurti with foil-print booti — pair with jeans or palazzos.",
+      "tags": [],
+      "stock": 14,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": "top",
+      "slug": "mustard-rayon-short-kurti"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-KRT-004",
+      "name": "Maroon Festive Silk Kurta",
+      "cat": "kurtis",
+      "art": "kurti",
+      "mrp": 2999,
+      "sale": 1799,
+      "colors": [
+        "Maroon",
+        "Wine"
+      ],
+      "gem": "ruby",
+      "bg": "blush",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "attrs": {
+        "fabric": "Silk Blend",
+        "fit": "Straight",
+        "sleeve": "Three-quarter",
+        "style": "Traditional",
+        "occasion": "Festive"
+      },
+      "weight": null,
+      "flags": "bestseller",
+      "collections": [
+        "festive-edit"
+      ],
+      "desc": "Rich silk-blend kurta with gota patti neckline and an ornate hem border.",
+      "tags": [],
+      "stock": 14,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": "top",
+      "slug": "maroon-festive-silk-kurta"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-SAR-001",
+      "name": "Banarasi Silk Blend Saree",
+      "cat": "sarees",
+      "art": "saree",
+      "mrp": 4999,
+      "sale": 2999,
+      "colors": [
+        "Magenta",
+        "Red",
+        "Emerald Green"
+      ],
+      "gem": "ruby",
+      "bg": "sand",
+      "sizes": [
+        "Free Size"
+      ],
+      "attrs": {
+        "fabric": "Silk Blend",
+        "fit": "Regular",
+        "sleeve": "Sleeveless",
+        "style": "Traditional",
+        "occasion": "Wedding"
+      },
+      "weight": null,
+      "flags": "featured,bestseller",
+      "collections": [
+        "festive-edit",
+        "wedding-season"
+      ],
+      "desc": "Woven in Varanasi-inspired zari florals with a rich pallu. 5.5 m saree + 0.8 m unstitched blouse piece.",
+      "tags": [],
+      "stock": 10,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": null,
+      "slug": "banarasi-silk-blend-saree"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-SAR-002",
+      "name": "Georgette Sequin Party Saree",
+      "cat": "sarees",
+      "art": "saree",
+      "mrp": 3999,
+      "sale": 2199,
+      "colors": [
+        "Black",
+        "Wine"
+      ],
+      "gem": "ruby",
+      "bg": "powder",
+      "sizes": [
+        "Free Size"
+      ],
+      "attrs": {
+        "fabric": "Georgette",
+        "fit": "Regular",
+        "sleeve": "Sleeveless",
+        "style": "Contemporary",
+        "occasion": "Party"
+      },
+      "weight": null,
+      "flags": "new",
+      "collections": [],
+      "desc": "Feather-light georgette with a shimmering sequin border.",
+      "tags": [],
+      "stock": 12,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": null,
+      "slug": "georgette-sequin-party-saree"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-SAR-003",
+      "name": "Pastel Chiffon Saree",
+      "cat": "sarees",
+      "art": "saree",
+      "mrp": 2999,
+      "sale": 1599,
+      "colors": [
+        "Peach",
+        "Lavender",
+        "Sage"
+      ],
+      "gem": "ruby",
+      "bg": "blush",
+      "sizes": [
+        "Free Size"
+      ],
+      "attrs": {
+        "fabric": "Chiffon",
+        "fit": "Regular",
+        "sleeve": "Sleeveless",
+        "style": "Minimal",
+        "occasion": "Festive"
+      },
+      "weight": null,
+      "flags": "",
+      "collections": [
+        "everyday-minimal"
+      ],
+      "desc": "Floaty chiffon in soft pastels with a delicate gold lace edge.",
+      "tags": [],
+      "stock": 12,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": null,
+      "slug": "pastel-chiffon-saree"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-DRS-001",
+      "name": "Royal Blue Anarkali Dress",
+      "cat": "ethnic-dresses",
+      "art": "anarkali",
+      "mrp": 3499,
+      "sale": 1999,
+      "colors": [
+        "Royal Blue",
+        "Maroon"
+      ],
+      "gem": "ruby",
+      "bg": "champagne",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "attrs": {
+        "fabric": "Georgette",
+        "fit": "Flared",
+        "sleeve": "Full",
+        "style": "Traditional",
+        "occasion": "Festive"
+      },
+      "weight": null,
+      "flags": "featured",
+      "collections": [
+        "festive-edit"
+      ],
+      "desc": "A floor-sweeping anarkali with a zari-embroidered yoke and a 6-metre flare.",
+      "tags": [],
+      "stock": 14,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": "top",
+      "slug": "royal-blue-anarkali-dress"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-DRS-002",
+      "name": "Floral Printed Ethnic Maxi",
+      "cat": "ethnic-dresses",
+      "art": "anarkali",
+      "mrp": 2199,
+      "sale": 1199,
+      "colors": [
+        "Peach",
+        "Teal"
+      ],
+      "gem": "ruby",
+      "bg": "blush",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "attrs": {
+        "fabric": "Rayon",
+        "fit": "Flared",
+        "sleeve": "Three-quarter",
+        "style": "Fusion",
+        "occasion": "Daily Wear"
+      },
+      "weight": null,
+      "flags": "new",
+      "collections": [],
+      "desc": "Tiered printed maxi with gold piping at the waist.",
+      "tags": [],
+      "stock": 14,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": "top",
+      "slug": "floral-printed-ethnic-maxi"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-TOP-001",
+      "name": "Ivory Satin Wrap Top",
+      "cat": "tops",
+      "art": "top",
+      "mrp": 1299,
+      "sale": 699,
+      "colors": [
+        "Ivory",
+        "Black",
+        "Blush Pink"
+      ],
+      "gem": "ruby",
+      "bg": "powder",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "attrs": {
+        "fabric": "Viscose",
+        "fit": "Regular",
+        "sleeve": "Full",
+        "style": "Formal",
+        "occasion": "Office"
+      },
+      "weight": null,
+      "flags": "bestseller",
+      "collections": [
+        "everyday-minimal"
+      ],
+      "desc": "A fluid satin-finish wrap top with tie waist — boardroom to dinner.",
+      "tags": [],
+      "stock": 14,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": "top",
+      "slug": "ivory-satin-wrap-top"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-TOP-002",
+      "name": "Blush Peplum Top",
+      "cat": "tops",
+      "art": "peplum",
+      "mrp": 1199,
+      "sale": 649,
+      "colors": [
+        "Blush Pink",
+        "Lavender"
+      ],
+      "gem": "ruby",
+      "bg": "blush",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "attrs": {
+        "fabric": "Crepe",
+        "fit": "Slim",
+        "sleeve": "Puff",
+        "style": "Contemporary",
+        "occasion": "Party"
+      },
+      "weight": null,
+      "flags": "new",
+      "collections": [],
+      "desc": "Puff-sleeve peplum top with a sweetheart neckline.",
+      "tags": [],
+      "stock": 14,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": "top",
+      "slug": "blush-peplum-top"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-TOP-003",
+      "name": "Classic White Linen Shirt",
+      "cat": "tops",
+      "art": "top",
+      "mrp": 1499,
+      "sale": 899,
+      "colors": [
+        "White",
+        "Beige"
+      ],
+      "gem": "ruby",
+      "bg": "ivory",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "attrs": {
+        "fabric": "Linen Blend",
+        "fit": "Relaxed",
+        "sleeve": "Full",
+        "style": "Casual",
+        "occasion": "Office"
+      },
+      "weight": null,
+      "flags": "",
+      "collections": [
+        "everyday-minimal"
+      ],
+      "desc": "Breathable linen-blend shirt with a relaxed drop shoulder.",
+      "tags": [],
+      "stock": 14,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": "top",
+      "slug": "classic-white-linen-shirt"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-TRS-001",
+      "name": "Navy High-Rise Tailored Trousers",
+      "cat": "trousers",
+      "art": "trousers",
+      "mrp": 1799,
+      "sale": 999,
+      "colors": [
+        "Navy",
+        "Black",
+        "Beige"
+      ],
+      "gem": "ruby",
+      "bg": "powder",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "attrs": {
+        "fabric": "Crepe",
+        "fit": "Slim",
+        "sleeve": "Sleeveless",
+        "style": "Formal",
+        "occasion": "Office"
+      },
+      "weight": null,
+      "flags": "bestseller",
+      "collections": [],
+      "desc": "High-rise, ankle-length trousers with pressed creases and side pockets.",
+      "tags": [],
+      "stock": 14,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": "bottom",
+      "slug": "navy-high-rise-tailored-trousers"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-TRS-002",
+      "name": "Flowy Wide-Leg Palazzos",
+      "cat": "trousers",
+      "art": "palazzo",
+      "mrp": 1199,
+      "sale": 599,
+      "colors": [
+        "Olive",
+        "Black",
+        "Mustard"
+      ],
+      "gem": "ruby",
+      "bg": "sand",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "attrs": {
+        "fabric": "Rayon",
+        "fit": "Wide-leg",
+        "sleeve": "Sleeveless",
+        "style": "Casual",
+        "occasion": "Daily Wear"
+      },
+      "weight": null,
+      "flags": "",
+      "collections": [],
+      "desc": "Elasticated wide-leg palazzos that pair with every kurti.",
+      "tags": [],
+      "stock": 14,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": "bottom",
+      "slug": "flowy-wide-leg-palazzos"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-CRD-001",
+      "name": "Mustard Printed Co-ord Set",
+      "cat": "coord-sets",
+      "art": "coord",
+      "mrp": 2499,
+      "sale": 1399,
+      "colors": [
+        "Mustard",
+        "Sage"
+      ],
+      "gem": "ruby",
+      "bg": "blush",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "attrs": {
+        "fabric": "Cotton",
+        "fit": "Relaxed",
+        "sleeve": "Short",
+        "style": "Casual",
+        "occasion": "Daily Wear"
+      },
+      "weight": null,
+      "flags": "featured,new",
+      "collections": [],
+      "desc": "Relaxed shirt and straight pants in a gold-foil geometric print.",
+      "tags": [],
+      "stock": 14,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": "top",
+      "slug": "mustard-printed-co-ord-set"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-LHG-001",
+      "name": "Crimson Bridal Lehenga Set",
+      "cat": "festive-apparel",
+      "art": "lehenga",
+      "mrp": 14999,
+      "sale": 8999,
+      "colors": [
+        "Red",
+        "Wine"
+      ],
+      "gem": "ruby",
+      "bg": "champagne",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "attrs": {
+        "fabric": "Silk Blend",
+        "fit": "Flared",
+        "sleeve": "Short",
+        "style": "Statement",
+        "occasion": "Wedding"
+      },
+      "weight": null,
+      "flags": "featured",
+      "collections": [
+        "wedding-season"
+      ],
+      "desc": "Hand-embellished zardozi lehenga with blouse and net dupatta. Semi-stitched skirt (waist up to 42\").",
+      "tags": [],
+      "stock": 5,
+      "cost_pct": 0.38,
+      "processing": 3,
+      "returnable": true,
+      "plating": null,
+      "chart": "top",
+      "slug": "crimson-bridal-lehenga-set"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-LHG-002",
+      "name": "Emerald Festive Lehenga",
+      "cat": "festive-apparel",
+      "art": "lehenga",
+      "mrp": 7999,
+      "sale": 4499,
+      "colors": [
+        "Emerald Green",
+        "Magenta"
+      ],
+      "gem": "ruby",
+      "bg": "sage",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "attrs": {
+        "fabric": "Organza",
+        "fit": "Flared",
+        "sleeve": "Sleeveless",
+        "style": "Statement",
+        "occasion": "Festive"
+      },
+      "weight": null,
+      "flags": "new",
+      "collections": [
+        "festive-edit"
+      ],
+      "desc": "Organza lehenga with sequin borders and a contrast dupatta.",
+      "tags": [],
+      "stock": 7,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": "top",
+      "slug": "emerald-festive-lehenga"
+    },
+    {
+      "kind": "apparel",
+      "sku": "AP-FST-001",
+      "name": "Wine Velvet Festive Kurta Set",
+      "cat": "festive-apparel",
+      "art": "kurta-full",
+      "mrp": 4499,
+      "sale": 2699,
+      "colors": [
+        "Wine",
+        "Navy"
+      ],
+      "gem": "ruby",
+      "bg": "blush",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "attrs": {
+        "fabric": "Silk Blend",
+        "fit": "Straight",
+        "sleeve": "Full",
+        "style": "Traditional",
+        "occasion": "Festive"
+      },
+      "weight": null,
+      "flags": "bestseller",
+      "collections": [
+        "festive-edit"
+      ],
+      "desc": "Velvet-touch kurta with palazzo and organza dupatta — three-piece festive set.",
+      "tags": [],
+      "stock": 14,
+      "cost_pct": 0.38,
+      "processing": 2,
+      "returnable": true,
+      "plating": null,
+      "chart": "top",
+      "slug": "wine-velvet-festive-kurta-set"
+    }
+  ]
+}
