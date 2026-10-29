@@ -218,6 +218,4 @@ class MockCheckoutIn(BaseModel):
 
 @router.post("/payments/razorpay/mock-checkout", summary="[mock mode only] Simulate the Razorpay checkout popup")
 def mock_checkout(body: MockCheckoutIn, db: Session = Depends(get_db)):
-    if settings.RAZORPAY_MODE != "mock":
-        raise NotFound("Not available")
     return payment_service.mock_checkout(db, body.razorpay_order_id, body.outcome == "success", body.method)

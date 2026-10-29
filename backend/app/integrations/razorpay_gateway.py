@@ -11,6 +11,7 @@ Razorpay signature rules (https://razorpay.com/docs/payments/server-integration/
 from __future__ import annotations
 
 import json
+import logging
 import secrets
 import time
 from dataclasses import dataclass
@@ -18,6 +19,8 @@ from typing import Any, Protocol
 
 from app.core.config import settings
 from app.core.security import constant_time_equals, hmac_sha256_hex
+
+log = logging.getLogger("app.payments")
 
 
 class GatewayError(Exception):
@@ -87,6 +90,13 @@ class RazorpayGateway(_SignatureMixin):
             return self.client.payment.fetch(payment_id)
         except Exception as e:
             raise GatewayError(f"Razorpay payment fetch failed: {e}") from e
+
+    def check_credentials(self) -> None:
+        """Make an authenticated read call; raises GatewayError if Razorpay rejects the keys."""
+        try:
+            self.client.order.all({"count": 1})
+        except Exception as e:
+            raise GatewayError(str(e) or e.__class__.__name__) from e
 
     def refund(self, payment_id: str, amount_paise: int, notes: dict, idempotency_key: str) -> dict[str, Any]:
         try:
@@ -164,27 +174,89 @@ class MockRazorpayGateway(_SignatureMixin):
         return r
 
 
+# ------------------------------------------------------------------ configuration
+# Admins can set mode/keys from the admin panel (stored in `store_settings`, secrets encrypted);
+# otherwise the RAZORPAY_* environment variables apply.
+SETTING_KEY = "payment_gateway"
+CONFIG_TTL_SECONDS = 15  # other workers pick up an admin change within this long
+
+
+@dataclass(frozen=True)
+class GatewayConfig:
+    mode: str
+    key_id: str
+    key_secret: str
+    webhook_secret: str
+    source: str  # "admin" | "env"
+
+    @property
+    def fingerprint(self) -> tuple:
+        return (self.mode, self.key_id, self.key_secret, self.webhook_secret)
+
+
+def env_config() -> GatewayConfig:
+    return GatewayConfig(settings.RAZORPAY_MODE, settings.RAZORPAY_KEY_ID, settings.RAZORPAY_KEY_SECRET,
+                         settings.RAZORPAY_WEBHOOK_SECRET, "env")
+
+
+def load_config(db) -> GatewayConfig:
+    from sqlalchemy import select
+
+    from app.core.security import decrypt_secret
+    from app.models import StoreSetting
+
+    row = db.scalar(select(StoreSetting).where(StoreSetting.key == SETTING_KEY))
+    v = row.value if row and isinstance(row.value, dict) else None
+    if not v or v.get("mode") not in ("mock", "test", "live"):
+        return env_config()
+    env = env_config()
+    key_secret = decrypt_secret(v["key_secret"]) if v.get("key_secret") else None
+    webhook_secret = decrypt_secret(v["webhook_secret"]) if v.get("webhook_secret") else None
+    if v["mode"] != "mock" and not (v.get("key_id") and key_secret):
+        log.error("Stored payment gateway credentials are unreadable (SECRET_KEY changed?); using .env settings")
+        return env
+    return GatewayConfig(v["mode"], v.get("key_id") or env.key_id, key_secret or env.key_secret,
+                         webhook_secret or env.webhook_secret, "admin")
+
+
+def build_gateway(cfg: GatewayConfig) -> PaymentGateway:
+    if cfg.mode == "mock":
+        return MockRazorpayGateway(cfg.key_id, cfg.key_secret, cfg.webhook_secret)
+    return RazorpayGateway(cfg.key_id, cfg.key_secret, cfg.webhook_secret, cfg.mode)
+
+
 _gateway: PaymentGateway | None = None
+_fingerprint: tuple | None = None
+_checked_at = 0.0
+_pinned = False
 
 
-def get_gateway() -> PaymentGateway:
-    global _gateway
-    if _gateway is None:
-        if settings.RAZORPAY_MODE == "mock":
-            _gateway = MockRazorpayGateway(
-                settings.RAZORPAY_KEY_ID, settings.RAZORPAY_KEY_SECRET, settings.RAZORPAY_WEBHOOK_SECRET
-            )
-        else:
-            _gateway = RazorpayGateway(
-                settings.RAZORPAY_KEY_ID,
-                settings.RAZORPAY_KEY_SECRET,
-                settings.RAZORPAY_WEBHOOK_SECRET,
-                settings.RAZORPAY_MODE,
-            )
+def get_gateway(db=None) -> PaymentGateway:
+    """The active gateway. Pass the request's session so admin-configured settings are honoured."""
+    global _gateway, _fingerprint, _checked_at
+    if _pinned and _gateway is not None:
+        return _gateway
+    stale = time.monotonic() - _checked_at > CONFIG_TTL_SECONDS
+    if db is not None and (stale or _gateway is None):
+        cfg = load_config(db)
+        _checked_at = time.monotonic()
+    elif _gateway is None:
+        cfg = env_config()
+    else:
+        return _gateway
+    if _gateway is None or cfg.fingerprint != _fingerprint:
+        _gateway, _fingerprint = build_gateway(cfg), cfg.fingerprint  # keep the mock's in-memory state otherwise
     return _gateway
 
 
+def reload_gateway(db) -> PaymentGateway:
+    """Force a re-read after the admin saves new settings."""
+    global _checked_at
+    _checked_at = 0.0
+    return get_gateway(db)
+
+
 def set_gateway(gw: PaymentGateway | None) -> None:
-    """Test hook."""
-    global _gateway
-    _gateway = gw
+    """Test hook: pin a gateway, or None to reset to configuration."""
+    global _gateway, _fingerprint, _checked_at, _pinned
+    _gateway, _fingerprint, _checked_at, _pinned = gw, None, 0.0, gw is not None

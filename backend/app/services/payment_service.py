@@ -98,7 +98,7 @@ def create_payment_order(db: Session, order: Order) -> dict:
                 wanted[it.variant_id] = wanted.get(it.variant_id, 0) + it.quantity
         inventory_service.reserve(db, order, wanted)
 
-    gw = get_gateway()
+    gw = get_gateway(db)
     amount = to_paise(order.grand_total)
     payment = db.scalar(select(Payment).where(Payment.order_id == order.id, Payment.status == "created",
                                               Payment.amount_paise == amount).order_by(Payment.id.desc()))
@@ -134,7 +134,7 @@ def create_payment_order(db: Session, order: Order) -> dict:
 
 # ------------------------------------------------------------------ verify (checkout callback)
 def verify_payment(db: Session, razorpay_order_id: str, razorpay_payment_id: str, signature: str) -> Order:
-    gw = get_gateway()
+    gw = get_gateway(db)
     payment = db.scalar(select(Payment).where(Payment.razorpay_order_id == razorpay_order_id).with_for_update())
     if not payment:
         raise NotFound("Payment not found", code="payment_not_found")
@@ -226,7 +226,7 @@ def report_failure(db: Session, razorpay_order_id: str, razorpay_payment_id: str
     if razorpay_payment_id:
         # Never trust the browser for state; confirm the failure with the gateway.
         try:
-            info = get_gateway().fetch_payment(razorpay_payment_id)
+            info = get_gateway(db).fetch_payment(razorpay_payment_id)
             if info.get("status") == "captured":
                 mark_paid(db, payment, order, razorpay_payment_id, info.get("method"), source="failure-recheck")
                 return order
@@ -254,7 +254,7 @@ def _mark_failed(db: Session, payment: Payment, order: Order, code: str | None, 
 
 # ------------------------------------------------------------------ webhooks
 def handle_webhook(db: Session, raw_body: bytes, signature: str | None, event_id: str | None) -> dict:
-    gw = get_gateway()
+    gw = get_gateway(db)
     valid = gw.verify_webhook_signature(raw_body, signature or "")
     try:
         data = json.loads(raw_body or b"{}")
@@ -362,8 +362,14 @@ def _refund_payment(db: Session, order: Order, payment: Payment, amount_paise: i
         # COD refunds are paid out manually (bank transfer/UPI) by the finance team.
         refund.status, refund.processed_at = "processed", utcnow()
     else:
+        gw = get_gateway(db)
+        if payment.mode != gw.mode:
+            refund.status = "failed"
+            db.flush()
+            raise PaymentError(f"This payment was taken in Razorpay {payment.mode} mode but the gateway is now in {gw.mode} mode. "
+                               "Switch the gateway back to refund it, or refund it from the Razorpay dashboard.", code="refund_mode_mismatch")
         try:
-            r = get_gateway().refund(payment.razorpay_payment_id, amount_paise, {"order_number": order.order_number, "reason": reason[:200]}, key)
+            r = gw.refund(payment.razorpay_payment_id, amount_paise, {"order_number": order.order_number, "reason": reason[:200]}, key)
         except GatewayError as e:
             refund.status = "failed"
             db.flush()
@@ -391,9 +397,9 @@ def _maybe_mark_refunded(db: Session, order: Order) -> None:
         order_service.transition(db, order, "refunded", actor=None, note="Refund processed", actor_type="system")
 
 
-# ------------------------------------------------------------------ mock simulator (RAZORPAY_MODE=mock only)
+# ------------------------------------------------------------------ mock simulator (gateway in mock mode only)
 def mock_checkout(db: Session, razorpay_order_id: str, succeed: bool, method: str) -> dict:
-    gw = get_gateway()
+    gw = get_gateway(db)
     if not isinstance(gw, MockRazorpayGateway):
         raise NotFound("Not available")
     payment = db.scalar(select(Payment).where(Payment.razorpay_order_id == razorpay_order_id))

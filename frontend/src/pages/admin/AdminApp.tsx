@@ -19,6 +19,7 @@ const Coupons = lazy(() => import("./Coupons"));
 const Shipping = lazy(() => import("./Shipping"));
 const Returns = lazy(() => import("./Returns"));
 const Content = lazy(() => import("./Content"));
+const Payments = lazy(() => import("./Payments"));
 const Reports = lazy(() => import("./Reports"));
 const AuditLog = lazy(() => import("./AuditLog"));
 
@@ -45,6 +46,7 @@ export default function AdminApp() {
         <Route path="coupons" element={<S><Guard perm="coupons:read" what="Coupons and promotions"><Coupons /></Guard></S>} />
         <Route path="shipping" element={<S><Guard perm="shipping:read" what="Shipping"><Shipping /></Guard></S>} />
         <Route path="returns" element={<S><Guard perm="returns:read" what="Returns"><Returns /></Guard></S>} />
+        <Route path="payments" element={<S><Guard perm="settings:write" what="Payment settings"><Payments /></Guard></S>} />
         <Route path="content" element={<S><Guard perm="content:write" what="Content and settings"><Content /></Guard></S>} />
         <Route path="reports" element={<S><Guard perm="reports:view" what="Reports"><Reports /></Guard></S>} />
         <Route path="audit" element={<S><Guard perm="audit:read" what="The audit log"><AuditLog /></Guard></S>} />

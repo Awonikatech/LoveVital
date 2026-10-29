@@ -201,6 +201,13 @@ export interface BannerRow {
 export type BannerPayload = Omit<BannerRow, "id">;
 export interface CmsPageRow { id: number; slug: string; title: string; body: string; seo_title: string | null; seo_description: string | null; is_published: boolean; updated_at: string }
 export interface SettingRow { key: string; value: any; description: string; is_public: boolean }
+export type GatewayMode = "mock" | "test" | "live";
+export interface GatewaySettings {
+  mode: GatewayMode; source: "admin" | "env"; key_id: string;
+  key_secret_set: boolean; key_secret_hint: string | null; webhook_secret_set: boolean; webhook_secret_hint: string | null;
+  webhook_url: string; webhook_events: string[]; production: boolean;
+}
+export interface GatewayPayload { mode: GatewayMode; key_id: string; key_secret?: string; webhook_secret?: string }
 export interface Subscriber { email: string; status: string; source: string | null; subscribed_at: string }
 export interface AuditRow { id: number; actor: string; action: string; entity_type: string; entity_id: string | null; changes: unknown; ip: string | null; at: string }
 
@@ -291,6 +298,10 @@ export const adminApi = {
     put<{ slug: string; title: string }>(`/pages/${encodeURIComponent(slug)}`, b),
   settings: () => g<SettingRow[]>("/settings"),
   saveSettings: (values: Record<string, unknown>) => put<{ ok: boolean }>("/settings", { values }),
+  paymentGateway: () => g<GatewaySettings>("/payment-gateway"),
+  savePaymentGateway: (body: GatewayPayload) => put<GatewaySettings>("/payment-gateway", body),
+  testPaymentGateway: (body: GatewayPayload) => post<{ ok: boolean; message: string }>("/payment-gateway/test", body),
+  resetPaymentGateway: () => del<GatewaySettings>("/payment-gateway"),
   newsletter: () => g<Subscriber[]>("/newsletter"),
 
   audit: (p: Params) => g<Paginated<AuditRow>>(`/audit-logs${qs(p)}`),

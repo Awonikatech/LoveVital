@@ -29,7 +29,7 @@ DEFAULT_SETTINGS: dict[str, tuple[Any, str, bool]] = {
     "low_stock_default_threshold": (5, "Default low-stock threshold", False),
     "return_window_days": (7, "Default return window (days)", True),
     "support_email": ("janviawadhesh@gmail.com", "Support email", True),
-    "support_phone": ("+91-8744092014", "Support phone", True),
+    "support_phone": ("+91-8744092015", "Support phone", True),
     "support_hours": ("Mon–Sat, 10am–7pm IST", "Support hours", True),
     "store_address": ("B1601, Samridhi Grand Avenue, Greater Noida (W), Uttar Pradesh 201305", "Registered address", True),
     "gstin": ("09ABCDE1234F1Z5", "Store GSTIN (demo)", True),
