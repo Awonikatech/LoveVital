@@ -5,7 +5,7 @@ import { errorMessage } from "@/services/api";
 import { useToast } from "@/features/toast";
 import { Spinner } from "@/components/ui";
 
-const TYPES = ["image/jpeg", "image/png", "image/webp", "image/gif"];
+const TYPES = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif"];
 
 /** Upload to /admin/uploads/image and hand back the URL; also allows pasting a URL. */
 export function ImageField({ label, value, onChange, folder, disabled }: {
@@ -16,7 +16,7 @@ export function ImageField({ label, value, onChange, folder, disabled }: {
   const [busy, setBusy] = useState(false);
   const pick = async (f: File | undefined) => {
     if (!f) return;
-    if (!TYPES.includes(f.type)) return toast("Only JPEG, PNG, WebP or GIF images are allowed", "error");
+    if (!TYPES.includes(f.type)) return toast("Only JPEG, PNG, WebP, GIF or AVIF images are allowed", "error");
     if (f.size > 5 * 1024 * 1024) return toast("Image must be smaller than 5 MB", "error");
     setBusy(true);
     try { onChange((await adminApi.uploadImage(f, folder)).url); toast("Image uploaded"); }

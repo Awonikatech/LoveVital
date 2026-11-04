@@ -356,7 +356,24 @@ def delete_product(product_id: int, request: Request, user: User = Depends(requi
 ALLOWED_IMAGE = {b"\xff\xd8\xff": ".jpg", b"\x89PNG\r\n\x1a\n": ".png", b"RIFF": ".webp", b"GIF8": ".gif"}
 
 
+AVIF_BRANDS = (b"avif", b"avis")
+
+
+def _is_avif(head: bytes) -> bool:
+    # ISO-BMFF: [box size][b"ftyp"][major brand][minor version][compatible brands...]
+    if head[4:8] != b"ftyp":
+        return False
+    size = int.from_bytes(head[:4], "big")
+    if size < 16:
+        return False
+    size = min(size, len(head))
+    brands = [head[8:12]] + [head[i:i + 4] for i in range(16, size - 3, 4)]
+    return any(b in AVIF_BRANDS for b in brands)
+
+
 def _sniff(head: bytes) -> str | None:
+    if _is_avif(head):
+        return ".avif"
     for magic, ext in ALLOWED_IMAGE.items():
         if head.startswith(magic):
             if ext == ".webp" and head[8:12] != b"WEBP":
@@ -366,12 +383,12 @@ def _sniff(head: bytes) -> str | None:
 
 
 async def save_upload(file: UploadFile, folder: str) -> str:
-    if file.content_type not in ("image/jpeg", "image/png", "image/webp", "image/gif"):
-        raise ValidationFailed("Only JPEG, PNG, WebP or GIF images are allowed", code="invalid_file_type")
+    if file.content_type not in ("image/jpeg", "image/png", "image/webp", "image/gif", "image/avif"):
+        raise ValidationFailed("Only JPEG, PNG, WebP, GIF or AVIF images are allowed", code="invalid_file_type")
     data = await file.read(settings.MAX_UPLOAD_MB * 1024 * 1024 + 1)
     if len(data) > settings.MAX_UPLOAD_MB * 1024 * 1024:
         raise ValidationFailed(f"Image must be smaller than {settings.MAX_UPLOAD_MB} MB", code="file_too_large")
-    ext = _sniff(data[:16])
+    ext = _sniff(data[:64])
     if not ext:
         raise ValidationFailed("File content is not a valid image", code="invalid_file_type")
     name = f"{secrets.token_hex(12)}{ext}"  # never trust the client filename
