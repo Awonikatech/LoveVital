@@ -61,7 +61,7 @@ export function Footer() {
       <div className="container-site grid gap-10 py-14 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <Logo light />
-          <p className="mt-4 max-w-sm leading-7 text-ivory/70">Heirloom-inspired artificial jewellery and festive couture, hand-finished by artisans in Jaipur, Kolkata and Rajkot.</p>
+          <p className="mt-4 max-w-sm leading-7 text-ivory/70">Discover stylish artificial jewellery and lifestyle essentials, thoughtfully selected to bring beauty, quality and everyday elegance to your life with LoveVital.</p>
           <div className="mt-6 flex gap-2">
             {social.instagram && <a href={social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="rounded-full border border-ivory/20 p-2.5 hover:border-gold-200 hover:text-gold-200"><Instagram className="h-4 w-4" /></a>}
             {social.facebook && <a href={social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="rounded-full border border-ivory/20 p-2.5 hover:border-gold-200 hover:text-gold-200"><Facebook className="h-4 w-4" /></a>}

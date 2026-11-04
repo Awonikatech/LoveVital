@@ -350,22 +350,11 @@ def _build() -> list[dict]:
 PRODUCTS = _build()
 
 PAGES = {
-   "about": ("About LoveVital", """## Crafted heritage, worn every day
-
-LoveVital began in 2019 in a small Jaipur workshop with one belief: heirloom-looking jewellery shouldn't be locked away for once-a-year occasions.
-
-Today our artisans in **Jaipur, Kolkata and Rajkot** hand-finish every kundan, temple and oxidised piece, while our apparel studio partners with weavers from **Chanderi, Varanasi and Sanganer**.
-
-### What we stand for
-- **Skin-friendly finishes** — nickel- and lead-safe base metals with anti-tarnish coating.
-- **Honest pricing** — MRP inclusive of all taxes, with no inflated "discounts".
-- **Artisan-first** — fair wages and year-round work for 140+ craftspeople.
-
-*This is a demo storefront built for evaluation purposes.*"""),
+   "about": ("About LoveVital", """LoveVital brings you beautiful jewellery and lifestyle products for every occasion. Discover stylish designs, festive essentials, and everyday favorites at affordable prices, all in one place. Shop with love, style, and confidence!"""),
     "contact": ("Contact Us", """## We'd love to hear from you
 
 **Customer care:** janviawadhesh@gmail.com
-**Phone / WhatsApp:** +91-8744092014 (Mon–Sat, 10am–7pm IST)
+**Phone / WhatsApp:** +91-8744092015 (Mon–Sat, 10am–7pm IST)
 
 **Registered office:** B1601, Samridhi Grand Avenue, Greater Noida (W), Uttar Pradesh 201305
 

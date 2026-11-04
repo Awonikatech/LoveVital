@@ -599,7 +599,7 @@ function Images({ product, write }: { product: AdminProduct; write: boolean }) {
     if (!files?.length) return;
     const list = Array.from(files);
     for (const f of list) {
-      if (!["image/jpeg", "image/png", "image/webp", "image/gif"].includes(f.type)) { toast(`${f.name}: only JPEG, PNG, WebP or GIF`, "error"); continue; }
+      if (!["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif"].includes(f.type)) { toast(`${f.name}: only JPEG, PNG, WebP, GIF or AVIF`, "error"); continue; }
       if (f.size > MAX_MB * 1024 * 1024) { toast(`${f.name}: must be under ${MAX_MB} MB`, "error"); continue; }
       setUploading((n) => n + 1);
       try { await adminApi.uploadProductImage(product.id, f); toast(`Uploaded ${f.name}`); }
@@ -649,8 +649,8 @@ function Images({ product, write }: { product: AdminProduct; write: boolean }) {
             <label className="flex aspect-square cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-gold-300 bg-gold-50/40 p-3 text-center text-sm text-kajal-700 hover:bg-gold-50">
               <ImagePlus className="h-6 w-6 text-gold-600" aria-hidden />
               {uploading ? `Uploading ${uploading}…` : "Upload images"}
-              <span className="text-xs text-kajal-400">JPEG, PNG, WebP, GIF · up to {MAX_MB} MB</span>
-              <input ref={input} type="file" multiple accept="image/jpeg,image/png,image/webp,image/gif" className="sr-only" onChange={(e) => onFiles(e.target.files)} />
+              <span className="text-xs text-kajal-400">JPEG, PNG, WebP, GIF, AVIF · up to {MAX_MB} MB</span>
+              <input ref={input} type="file" multiple accept="image/jpeg,image/png,image/webp,image/gif,image/avif" className="sr-only" onChange={(e) => onFiles(e.target.files)} />
             </label>
           </li>
         )}

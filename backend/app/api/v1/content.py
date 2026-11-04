@@ -22,10 +22,10 @@ def public_settings(db: Session) -> dict:
 
 @router.get("/settings/public")
 def get_public_settings(db: Session = Depends(get_db)):
-    from app.core.config import settings as cfg
+    from app.integrations.razorpay_gateway import get_gateway
 
     data = public_settings(db)
-    data["payment_mode"] = cfg.RAZORPAY_MODE
+    data["payment_mode"] = get_gateway(db).mode
     return data
 
 

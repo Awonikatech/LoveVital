@@ -217,6 +217,18 @@ def test_image_upload_accepts_real_png(client, db, catalog, admin_h, media_tmp):
     assert os.path.exists(os.path.join(media_tmp, url.lstrip("/")))
 
 
+def test_image_upload_accepts_avif(client, catalog, admin_h, media_tmp):
+    pid = catalog.products["ring"].id
+    # ftyp box: major brand mif1, compatible brands include avif (as written by many encoders)
+    avif = struct.pack(">I", 28) + b"ftyp" + b"mif1" + b"\x00\x00\x00\x00" + b"mif1avifmiaf" + b"\x00" * 64
+    r = client.post(f"{ADMIN}/products/{pid}/images", headers=admin_h, files={"file": ("x.avif", avif, "image/avif")})
+    assert r.status_code == 201, r.text
+    assert r.json()["url"].endswith(".avif")
+    heic = struct.pack(">I", 24) + b"ftyp" + b"heic" + b"\x00\x00\x00\x00" + b"mif1heic" + b"\x00" * 64
+    r = client.post(f"{ADMIN}/products/{pid}/images", headers=admin_h, files={"file": ("x.avif", heic, "image/avif")})
+    assert r.status_code == 422
+
+
 def test_image_upload_rejects_disguised_text_file(client, catalog, admin_h, media_tmp):
     pid = catalog.products["ring"].id
     r = client.post(f"{ADMIN}/products/{pid}/images", headers=admin_h,

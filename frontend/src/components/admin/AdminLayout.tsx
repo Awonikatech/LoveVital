@@ -1,7 +1,7 @@
 import { useEffect, useState, type ComponentType } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import {
-  BarChart3, Boxes, FolderTree, LayoutDashboard, LogOut, Menu, Package, PanelsTopLeft, RotateCcw, ScrollText,
+  BarChart3, Boxes, CreditCard, FolderTree, LayoutDashboard, LogOut, Menu, Package, PanelsTopLeft, RotateCcw, ScrollText,
   ShoppingBag, Sparkles, Store, TicketPercent, Truck, Users, X,
 } from "lucide-react";
 import { useAuth } from "@/features/auth";
@@ -30,6 +30,7 @@ export const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
   ] },
   { label: "Store", items: [
     { to: "/admin/shipping", label: "Shipping", icon: Truck, perm: "shipping:read" },
+    { to: "/admin/payments", label: "Payments", icon: CreditCard, perm: "settings:write" },
     { to: "/admin/content", label: "Content & settings", icon: PanelsTopLeft, perm: "content:write" },
     { to: "/admin/audit", label: "Audit log", icon: ScrollText, perm: "audit:read" },
   ] },
@@ -40,7 +41,7 @@ const TITLES: [RegExp, string][] = [
   [/^\/admin\/products/, "Products"], [/^\/admin\/categories/, "Categories"], [/^\/admin\/collections/, "Collections"],
   [/^\/admin\/inventory/, "Inventory"], [/^\/admin\/orders\/\d+/, "Order"], [/^\/admin\/orders/, "Orders"],
   [/^\/admin\/customers\/\d+/, "Customer"], [/^\/admin\/customers/, "Customers"], [/^\/admin\/coupons/, "Coupons & offers"],
-  [/^\/admin\/shipping/, "Shipping"], [/^\/admin\/returns/, "Returns"], [/^\/admin\/content/, "Content & settings"],
+  [/^\/admin\/shipping/, "Shipping"], [/^\/admin\/returns/, "Returns"], [/^\/admin\/content/, "Content & settings"], [/^\/admin\/payments/, "Payments"],
   [/^\/admin\/reports/, "Reports"], [/^\/admin\/audit/, "Audit log"],
 ];
 

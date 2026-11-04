@@ -403,7 +403,8 @@ def seed_commerce(db: Session) -> None:
                 ("Swarnika", "LoveVital"),
                 ("care@swarnika.example.com", "janviawadhesh@gmail.com"),
                 ("care@lovevital.example.com", "janviawadhesh@gmail.com"),
-                ("+91 98100 00000", "+91-8744092014"),
+                ("+91 98100 00000", "+91-8744092015"),
+                ("+91-8744092014", "+91-8744092015"),
                 ("Plot 21, Sector 63, Noida, Uttar Pradesh 201301", "B1601, Samridhi Grand Avenue, Greater Noida (W), Uttar Pradesh 201305"),
             ):
                 pg.body = pg.body.replace(old, new)
@@ -419,8 +420,8 @@ def seed_commerce(db: Session) -> None:
             setting.value = "janviawadhesh@gmail.com"
         elif key == "support_email" and setting.value == "care@lovevital.example.com":
             setting.value = "janviawadhesh@gmail.com"
-        elif key == "support_phone" and setting.value == "+91 98100 00000":
-            setting.value = "+91-8744092014"
+        elif key == "support_phone" and setting.value in ("+91 98100 00000", "+91-8744092014"):
+            setting.value = "+91-8744092015"
         elif key == "store_address" and setting.value == "Plot 21, Sector 63, Noida, Uttar Pradesh 201301":
             setting.value = "B1601, Samridhi Grand Avenue, Greater Noida (W), Uttar Pradesh 201305"
     for e in ["hello.ritu@example.com", "neha.g@example.com", "simran.k@example.com", "avni.m@example.com", settings.SEED_CUSTOMER_EMAIL]:
