@@ -47,14 +47,6 @@ export default function Login() {
         <Button type="submit" block size="lg" loading={form.formState.isSubmitting}>Log in</Button>
       </form>
       <p className="mt-6 text-center text-[15px] text-kajal-500">New to LoveVital? <Link to={`/register${sp.get("next") ? `?next=${encodeURIComponent(sp.get("next")!)}` : ""}`} className="link-underline text-kajal">Create an account</Link></p>
-      <div className="mt-8 rounded-2xl border border-dashed border-gold-300 bg-gold-50/60 p-4 text-sm text-kajal-700">
-        <p className="font-medium">Demo accounts</p>
-        <ul className="mt-1.5 space-y-0.5 text-kajal-500">
-          <li>Customer: priya@example.com / Customer@123</li>
-          <li>Admin: admin@lovevital.example.com / Admin@12345</li>
-          <li>Staff: staff@lovevital.example.com / Staff@12345</li>
-        </ul>
-      </div>
     </AuthShell>
   );
 }
